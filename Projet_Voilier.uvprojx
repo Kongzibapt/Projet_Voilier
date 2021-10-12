@@ -403,6 +403,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Timer.c</FilePath>
             </File>
+            <File>
+              <FileName>USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\USART.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -809,6 +814,11 @@
               <FileName>Timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\USART.c</FilePath>
             </File>
           </Files>
         </Group>
