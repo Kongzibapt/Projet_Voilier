@@ -17,6 +17,5 @@ void MyUSART_ActiveIT (USART_TypeDef * USART, char Prio){
 }
 
 void USART1_IRQHandler(void) {
-	//TIM4->SR &= ~(TIM_SR_UIF);
-	//TIM4_callback();
+	USART1_callback();
 }

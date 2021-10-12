@@ -1,7 +1,6 @@
 #include "stm32f10x.h"
 #include "USART.h"
 
-
 int main (void)
 {
 	MyUSART_Struct_TypeDef MyUSART1;
