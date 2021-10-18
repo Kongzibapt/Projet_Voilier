@@ -1,6 +1,7 @@
 #ifndef USART_H
 #define USART_H
 #include "stm32f10x.h"
+#define BAUD_RATE 0x1D4C
 
 typedef  struct{
 	USART_TypeDef * USART ; 

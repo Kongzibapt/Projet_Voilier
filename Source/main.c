@@ -5,7 +5,7 @@ int main (void)
 {
 	MyUSART_Struct_TypeDef MyUSART1;
 	
-	RCC->APB2ENR |= (0x01 << 2)|(0x01 << 3)|(0x01 << 4);
+	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 	
 	MyUSART1.USART = USART1;
 	
