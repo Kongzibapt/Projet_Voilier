@@ -1,6 +1,13 @@
 #include "stm32f10x.h"
 #include "USART.h"
 
+int value = 0;
+
+void USART1_callback (void) 
+{
+	value = Read_DR_Value(USART1);
+}
+
 int main (void)
 {
 	MyUSART_Struct_TypeDef MyUSART1;

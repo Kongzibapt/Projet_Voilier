@@ -17,6 +17,10 @@ void MyUSART_ActiveIT (USART_TypeDef * USART, char Prio){
 	NVIC->ISER[1] |= NVIC_ISER_SETENA_5;
 }
 
+int Read_DR_Value (USART_TypeDef * USART){
+	return(USART->DR);
+}
+
 void USART1_IRQHandler(void) {
 	USART1_callback();
 }
