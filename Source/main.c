@@ -10,6 +10,7 @@
 
 char directionBit = 0;
 int RC = 0;
+unsigned short Frac_ARR;
 
 //sens horaire = positif
 char Is_Positive (int arg) {
@@ -26,12 +27,13 @@ void USART1_callback (void)
 	value = Read_DR_Value(USART1);
 	directionBit = Is_Positive(value);
 	
-	if( directionBit) {
+	if(directionBit) {
 		RC = value;
 	} else {
 		RC = 100 - (value - 156);
 	}
-	Modif_RapportCyclique(TIM4, MON_ARR*(RC/100));
+	Frac_ARR = MON_ARR*(RC/100.0);
+	Modif_RapportCyclique(TIM4, Frac_ARR);
 }
 
 int main (void)
@@ -52,8 +54,8 @@ int main (void)
 	MyGPIO_PWM.GPIO_Pin = BROCHE_PWM;
 	MyGPIO_PWM.GPIO_Conf = AltOut_Ppull;
 	
-	MyUSART_Base_Init (&MyUSART1) ;
-	MyUSART_ActiveIT (MyUSART1.USART, 0);
+	MyUSART_Base_Init(&MyUSART1) ;
+	MyUSART_ActiveIT(MyUSART1.USART, 0);
 
 	MyTimer_Base_Init(&MyTimer);
 	MyTimer_PWM(MyTimer.Timer,1);
