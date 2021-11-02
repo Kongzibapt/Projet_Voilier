@@ -9,7 +9,7 @@ typedef  struct{
 
 
 
-void MyUSART_Base_Init ( MyUSART_Struct_TypeDef * USART ) ;
+void MyUSART_Base_Init ( MyUSART_Struct_TypeDef * USART , char num, char mode) ;
 void MyUSART_ActiveIT (USART_TypeDef * USART, char Prio);
 int Read_DR_Value (USART_TypeDef * USART);
 
