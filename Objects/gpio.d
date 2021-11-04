@@ -1,5 +1,5 @@
-.\objects\gpio.o: Source\GPIO.c
-.\objects\gpio.o: .\Include\GPIO.h
+.\objects\gpio.o: Unités\Test_Unitaire_GPIO\Source\GPIO.c
+.\objects\gpio.o: Unités\Test_Unitaire_GPIO\Source\../Include/GPIO.h
 .\objects\gpio.o: C:\Users\floeh\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h
 .\objects\gpio.o: .\RTE\_R_el\RTE_Components.h
 .\objects\gpio.o: C:\Users\floeh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include\core_cm3.h

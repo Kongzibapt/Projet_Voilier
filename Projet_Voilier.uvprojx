@@ -394,11 +394,6 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>GPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\GPIO.c</FilePath>
-            </File>
-            <File>
               <FileName>Timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Timer.c</FilePath>
@@ -407,6 +402,16 @@
               <FileName>USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotation_plateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\rotation_plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Unités\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -806,11 +811,6 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>GPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\GPIO.c</FilePath>
-            </File>
-            <File>
               <FileName>Timer.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Timer.c</FilePath>
@@ -819,6 +819,16 @@
               <FileName>USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>rotation_plateau.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\rotation_plateau.c</FilePath>
+            </File>
+            <File>
+              <FileName>GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Unités\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
             </File>
           </Files>
         </Group>
