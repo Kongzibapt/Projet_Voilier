@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Projet_Voilier' 
+ * Project: 'Projet_Demo' 
  * Target:  'Réel' 
  */
 

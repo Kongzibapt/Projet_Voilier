@@ -394,11 +394,6 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>Timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Timer.c</FilePath>
-            </File>
-            <File>
               <FileName>USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\USART.c</FilePath>
@@ -412,6 +407,11 @@
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Unités\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Unités\Test_Unitaire_PWM\Source\Timer.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -811,11 +811,6 @@
           <GroupName>MesDrivers</GroupName>
           <Files>
             <File>
-              <FileName>Timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Timer.c</FilePath>
-            </File>
-            <File>
               <FileName>USART.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\USART.c</FilePath>
@@ -829,6 +824,11 @@
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Unités\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Unités\Test_Unitaire_PWM\Source\Timer.c</FilePath>
             </File>
           </Files>
         </Group>
