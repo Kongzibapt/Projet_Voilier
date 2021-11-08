@@ -22,15 +22,30 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 C:\Users\floeh\Desktop\INSA\4A\Projet_Voilier\Projet_Voilier.uvprojx
-Project File Date:  10/18/2021
+Project File Date:  11/08/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'Simulé'
-compiling main.c...
-linking...
-Program Size: Code=944 RO-data=268 RW-data=8 ZI-data=1024  
-".\Objects\Projet_Voilier_Simulé.axf" - 0 Error(s), 0 Warning(s).
+compiling Musique.c...
+.\Include\Musique.h(14): warning:  #1295-D: Deprecated declaration initMusique - give arg types
+  	void initMusique();
+.\Include\Musique.h(15): warning:  #1295-D: Deprecated declaration getNextARR - give arg types
+  	void getNextARR();
+.\Include\Musique.h(16): warning:  #1295-D: Deprecated declaration getNextPSC - give arg types
+  	void getNextPSC();
+Source\Musique.c(12): error:  #268: declaration may not appear after executable statement in block
+  	char str[5];
+Source\Musique.c(15): error:  #268: declaration may not appear after executable statement in block
+  	unsigned short ARR = (unsigned short)(str);
+Source\Musique.c(15): warning:  #767-D: conversion from pointer to smaller integer
+  	unsigned short ARR = (unsigned short)(str);
+Source\Musique.c(15): warning:  #177-D: variable "ARR"  was declared but never referenced
+  	unsigned short ARR = (unsigned short)(str);
+Source\Musique.c(20): warning:  #1-D: last line of file ends without a newline
+  }
+Source\Musique.c: 6 warnings, 2 errors
+".\Objects\Projet_Voilier_Simulé.axf" - 2 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -57,10 +72,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
       Source file:   Device\Source\system_stm32f10x.c
       Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+Target not created.
 Build Time Elapsed:  00:00:00
 </pre>
 </body>

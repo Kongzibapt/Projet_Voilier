@@ -1,7 +1,7 @@
 #include "stm32f10x.h"
 #include "USART.h"
-#include "../Unités/Test_Unitaire_PWM/Include/Timer.h"
-#include "../Unités/Test_Unitaire_GPIO/Include/GPIO.h"
+#include "../Unites/Test_Unitaire_PWM/Include/Timer.h"
+#include "../Unites/Test_Unitaire_GPIO/Include/GPIO.h"
 #include "rotation_plateau.h"
 
 char directionBit = 0;
@@ -35,22 +35,34 @@ void USART1_callback (void)
 	
 }
 
+void TIM2_callback (void) 
+{
+	
+	Modif_ARR_PSC(TIM4, 0x2, 0x1);
+}
+
 void manage_rotation()
 {	
 	//Declarations
 	MyUSART_Struct_TypeDef MyUSART1;
 	MyTimer_Struct_TypeDef MyTimer;
+	MyTimer_Struct_TypeDef MyTimer_Musique;
 	MyGPIO_Struct_TypeDef MyGPIO_PWM;
 	MyGPIO_Struct_TypeDef MyGPIO_Direct;
 
 	//Temp
-	RCC->APB1ENR |= RCC_APB1ENR_TIM4EN;
+	//RCC->APB1ENR |= RCC_APB1ENR_TIM4EN;
 	
 	//Spec
 	MyUSART1.USART = USART1;
+
 	MyTimer.Timer = TIM4;
 	MyTimer.PSC = MON_PSC;
 	MyTimer.ARR = MON_ARR;
+
+	MyTimer_Musique.Timer = TIM2;
+	MyTimer_Musique.PSC = PSC_MUSIQUE;
+	MyTimer_Musique.ARR = ARR_MUSIQUE;
 
 	MyGPIO_PWM.GPIO = GPIOB;
 	MyGPIO_PWM.GPIO_Pin = BROCHE_PWM;
@@ -66,6 +78,8 @@ void manage_rotation()
 
 	MyTimer_Base_Init(&MyTimer);
 	MyTimer_PWM(MyTimer.Timer,1);
+
+	MyTimer_Base_Init(&MyTimer_Musique);
 
 	MyGPIO_Init(&MyGPIO_PWM);
 	MyGPIO_Init(&MyGPIO_Direct);

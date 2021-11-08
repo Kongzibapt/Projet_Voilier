@@ -5,6 +5,11 @@ __WEAK void TIM4_callback (void)
 {
 }
 
+//Interruption pour la musique (update la freq de la PWM)
+__WEAK void TIM2_callback (void) 
+{
+}
+
 void MyTimer_Base_Init ( MyTimer_Struct_TypeDef * Timer ) {
 	if(Timer->Timer == TIM1){
 		RCC->APB2ENR |= RCC_APB2ENR_TIM1EN;
@@ -33,6 +38,11 @@ void TIM4_IRQHandler(void) {
 
 void Modif_RapportCyclique(TIM_TypeDef* Timer, unsigned short mon_cc1){
 	Timer->CCR1 = mon_cc1;
+}
+
+void Modif_ARR_PSC(TIM_TypeDef* Timer, unsigned short _ARR, unsigned short _PSC) {
+	Timer->ARR = _ARR;
+	Timer->PSC = _PSC;
 }
 
 void MyTimer_PWM(TIM_TypeDef* Timer, char Channel ){

@@ -14,5 +14,6 @@
 	void MyTimer_PWM(TIM_TypeDef* Timer, char Channel );
 	void Modif_RapportCyclique(TIM_TypeDef* Timer, unsigned short mon_cc1);
 	void TIM4_IRQHandler(void) ;
+	void Modif_ARR_PSC(TIM_TypeDef* Timer, unsigned short _ARR, unsigned short _PSC);
 
 #endif

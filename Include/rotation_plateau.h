@@ -4,6 +4,9 @@
 	#define MON_ARR 0x0E0F
 	#define MON_PSC 0x0000
 
+	#define ARR_MUSIQUE 0xFFB9
+	#define PSC_MUSIQUE 0x0249
+
 	#define BROCHE_DIRECTION 7
 	#define BROCHE_PWM 6
 

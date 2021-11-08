@@ -406,12 +406,17 @@
             <File>
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Unités\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
+              <FilePath>.\Unites\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
             </File>
             <File>
               <FileName>Timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Unités\Test_Unitaire_PWM\Source\Timer.c</FilePath>
+              <FilePath>.\Unites\Test_Unitaire_PWM\Source\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Musique.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Musique.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -823,12 +828,17 @@
             <File>
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Unités\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
+              <FilePath>.\Unites\Test_Unitaire_GPIO\Source\GPIO.c</FilePath>
             </File>
             <File>
               <FileName>Timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Unités\Test_Unitaire_PWM\Source\Timer.c</FilePath>
+              <FilePath>.\Unites\Test_Unitaire_PWM\Source\Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>Musique.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Musique.c</FilePath>
             </File>
           </Files>
         </Group>
