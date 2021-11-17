@@ -424,11 +424,6 @@
               <FilePath>.\Source\Bordage.c</FilePath>
             </File>
             <File>
-              <FileName>Driver_GPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Driver_GPIO.c</FilePath>
-            </File>
-            <File>
               <FileName>Encoder.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Encoder.c</FilePath>
@@ -874,11 +869,6 @@
               <FileName>Bordage.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Bordage.c</FilePath>
-            </File>
-            <File>
-              <FileName>Driver_GPIO.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Driver_GPIO.c</FilePath>
             </File>
             <File>
               <FileName>Encoder.c</FileName>

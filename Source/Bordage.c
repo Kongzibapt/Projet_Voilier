@@ -14,12 +14,12 @@
 #define PWM_PSC 24
 
 //declaration de nos tymer girouette GRT et PWM
-MyTimer_Struct_TypeDef MyTimer_GRT; 
-MyTimer_Struct_TypeDef MyTimerPWM;
+static MyTimer_Struct_TypeDef MyTimer_GRT; 
+static MyTimer_Struct_TypeDef MyTimerPWM;
 
-MyGPIO_Struct_TypeDef CHA;
-MyGPIO_Struct_TypeDef CHB;
-MyGPIO_Struct_TypeDef ZERO;
+static MyGPIO_Struct_TypeDef CHA;
+static MyGPIO_Struct_TypeDef CHB;
+static MyGPIO_Struct_TypeDef ZERO;
 
 
 void init_bordage(void){
@@ -32,7 +32,7 @@ void init_bordage(void){
 	MyTimer_GRT.Timer = TIMER_GIROUETTE;
 	MyTimer_GRT.ARR = GIROUETTE_ARR;
 	MyTimer_GRT.Timer_num = 3;
-	MyTimer_Base_Init(&MyTimer_GRT);
+	MyTimerB_Base_Init(&MyTimer_GRT);
 	MyTimer_Base_Start(&MyTimer_GRT);
 
 	//TIM3_CH1=PA6
@@ -65,10 +65,10 @@ void init_bordage(void){
 	MyTimerPWM.ARR = PWM_ARR;
 	MyTimerPWM.PSC = PWM_PSC;
 	MyTimerPWM.Timer_num = 2;
-	MyTimer_Base_Init(&MyTimerPWM);
+	MyTimerB_Base_Init(&MyTimerPWM);
 	MyTimer_Base_Start(&MyTimerPWM);
 	PWM_Port_Init(2, 2);
-	MyTimer_PWM(MyTimerPWM.Timer, 2);
+	MyTimerB_PWM(MyTimerPWM.Timer, 2);
 
 }
 

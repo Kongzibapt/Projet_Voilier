@@ -1,12 +1,13 @@
 #include "stm32f10x.h"
 #include "MyTimer.h"
 #include "Driver_GPIO.h"
+#include "PWM.h"
 
 
-short TIMER1_TAB_CH[4] = {8,9,10,11}; // GPIOA
-short TIMER2_TAB_CH[4] = {0,1,2,3};		//GPIOA
-short TIMER3_TAB_CH[4] = {6,7,0,1};		// GPIOA puis GPIOB
-short TIMER4_TAB_CH[4] = {6,7,8,9};		//GPIOB
+static short TIMER1_TAB_CH[4] = {8,9,10,11}; // GPIOA
+static short TIMER2_TAB_CH[4] = {0,1,2,3};		//GPIOA
+static short TIMER3_TAB_CH[4] = {6,7,0,1};		// GPIOA puis GPIOB
+static short TIMER4_TAB_CH[4] = {6,7,8,9};		//GPIOB
 
 //On initialise le port associé aux channel choisi
 void PWM_Port_Init(int Timer_number, int Channel){
@@ -47,7 +48,7 @@ void PWM_RapportCyclique(TIM_TypeDef * Timer, int alpha){
 	Timer->CCR2 = alpha;	
 }
 
-void MyTimer_PWM(TIM_TypeDef * Timer, int Channel){
+void MyTimerB_PWM(TIM_TypeDef * Timer, int Channel){
 	//Mode 1 -> OCxM bit = 110 in CCMRx
 	switch (Channel) {
 		case 1:

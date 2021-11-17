@@ -18,7 +18,7 @@ typedef struct{
 *************************************************************************************************
 */
 
-void MyTimer_Base_Init (MyTimer_Struct_TypeDef *Timer) ;
+void MyTimerB_Base_Init (MyTimer_Struct_TypeDef *Timer) ;
 void MyTimer_Base_Start(MyTimer_Struct_TypeDef *Timer);
 void MyTimer_Base_Stop(MyTimer_Struct_TypeDef *Timer);
 
@@ -27,12 +27,12 @@ void MyTimer_Base_Stop(MyTimer_Struct_TypeDef *Timer);
 * @brief
 * @param : - TIM_TypeDef * Timer : Timer concerne
 - char Prio : de 0 a 15
-* @Note : La fonction MyTimer_Base_Init doit avoir ete lancee au prealable
+* @Note : La fonction MyTimerB_Base_Init doit avoir ete lancee au prealable
 **************************************************************************************************
 */
-void MyTimer_ActiveIT ( MyTimer_Struct_TypeDef * Timer , char Prio, void(*IT_function) (void));
+void MyTimerB_ActiveIT ( MyTimer_Struct_TypeDef * Timer , char Prio, void(*IT_function) (void));
 void TIM2_IRQHandler ( void );
 void TIM3_IRQHandler ( void );
-void TIM4_IRQHandler ( void );
+void TIM4B_IRQHandler ( void );
 
 #endif

@@ -7,7 +7,7 @@ static void( *tim2_function) (void);
 static void( *tim3_function) (void);
 static void( *tim4_function) (void);
 
-void MyTimer_Base_Init (MyTimer_Struct_TypeDef * MyTimer)
+void MyTimerB_Base_Init (MyTimer_Struct_TypeDef * MyTimer)
 {	
 	RCC->APB1ENR |= (1<<(MyTimer->Timer_num -2));		//enable du tim
 	MyTimer->Timer->ARR=MyTimer->ARR;
@@ -30,11 +30,11 @@ void MyTimer_Base_Stop(MyTimer_Struct_TypeDef * Timer)
 * @brief
 * @param : - TIM_TypeDef * Timer : Timer concerne
 - char Prio : de 0 a 15
-* @Note : La fonction MyTimer_Base_Init doit avoir ete lancee au prealable
+* @Note : La fonction MyTimerB_Base_Init doit avoir ete lancee au prealable
 **************************************************************************************************
 */
 
-void MyTimer_ActiveIT ( MyTimer_Struct_TypeDef * Timer, char Prio, void(*IT_function) (void)){
+void MyTimerB_ActiveIT ( MyTimer_Struct_TypeDef * Timer, char Prio, void(*IT_function) (void)){
 	uint16_t IRQn_Timer = 26+Timer->Timer_num;
 	NVIC->ISER[0] |= (1 << IRQn_Timer); //activation IT NVIC
 	NVIC_SetPriority((IRQn_Type)IRQn_Timer,Prio);
@@ -68,7 +68,7 @@ void TIM3_IRQHandler ( void )
 	tim3_function();
 }
 
-void TIM4_IRQHandler ( void )
+void TIM4B_IRQHandler ( void )
 {
 	TIM4->SR &= ~TIM_SR_UIF;
 	tim4_function();

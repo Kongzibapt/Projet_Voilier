@@ -6,13 +6,13 @@ void initMusique() {
 }
 
 void getNextARR() {
-	FILE* file = NULL;
-	file = fopen(NOTES_FILE, "r");
-
 	char str[5];
-	fgets(str, 5, file);
+	FILE* file = NULL;
+	unsigned short ARR;
 
-	unsigned short ARR = (unsigned short)(str);
+	file = fopen(NOTES_FILE, "r");
+	fgets(str, 5, file);
+	ARR = (unsigned short)(str);
 }
 
 void getNextPSC() {
