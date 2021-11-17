@@ -418,6 +418,36 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Musique.c</FilePath>
             </File>
+            <File>
+              <FileName>Bordage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Bordage.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>Encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Servo.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -839,6 +869,36 @@
               <FileName>Musique.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Musique.c</FilePath>
+            </File>
+            <File>
+              <FileName>Bordage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Bordage.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_GPIO.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>Encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\MyTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Servo.c</FilePath>
             </File>
           </Files>
         </Group>
