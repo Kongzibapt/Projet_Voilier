@@ -9,6 +9,6 @@ int main (void)
 	
 	do
 	{
-		bordage_auto();
+		//bordage_auto();
 	} while (1);
 }
