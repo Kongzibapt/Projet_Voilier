@@ -21,6 +21,9 @@ static MyGPIO_Struct_TypeDef CHA;
 static MyGPIO_Struct_TypeDef CHB;
 static MyGPIO_Struct_TypeDef ZERO;
 
+void bordage_auto(void){
+	angle_servo(TIMER_GIROUETTE->CNT/4, TIMER_PWM);
+}
 
 void init_bordage(void){
 	
@@ -69,9 +72,7 @@ void init_bordage(void){
 	MyTimer_Base_Start(&MyTimerPWM);
 	PWM_Port_Init(2, 2);
 	MyTimerB_PWM(MyTimerPWM.Timer, 2);
-
+	
+	MyTimer_ActiveIT (&MyTimerPWM, 5, &bordage_auto);
 }
 
-void bordage_auto(void){
-	angle_servo(TIMER_GIROUETTE->CNT/4, TIMER_PWM);
-}
