@@ -73,6 +73,6 @@ void init_bordage(void){
 	PWM_Port_Init(2, 2);
 	MyTimerB_PWM(MyTimerPWM.Timer, 2);
 	
-	MyTimer_ActiveIT (&MyTimerPWM, 5, &bordage_auto);
+	MyTimerB_ActiveIT(&MyTimerPWM, 5, &bordage_auto);
 }
 

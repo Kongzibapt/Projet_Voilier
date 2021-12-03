@@ -3,33 +3,43 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.36.0.0
-Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Ellias Chabloz, INSA, LIC=----
+IDE-Version: µVision V5.33.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: flo R, insa, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.36.0.0
+Toolchain:       MDK-Lite  Version: 5.33.0.0
 Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
 Library Manager: ArmAr.exe V5.06 update 7 (build 960)
 Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.36.0.0
+CPU DLL:         SARMCM3.DLL V5.33.0.0
 Dialog DLL:      DARMSTM.DLL V1.68.0.0
-Target DLL:      UL2CM3.DLL V1.164.0.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
 Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
-D:\Documents\4IR\ArchiMat\Projet_Voilier\Projet_Voilier.uvprojx
-Project File Date:  11/17/2021
+C:\Users\floeh\Desktop\INSA\Projet_Voilier\Projet_Voilier.uvprojx
+Project File Date:  12/02/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Simulé'
+compiling GPIO.c...
 compiling USART.c...
+compiling Encoder.c...
 compiling main.c...
+compiling PWM.c...
+compiling Servo.c...
+compiling MyTimer.c...
+compiling Timer.c...
 compiling rotation_plateau.c...
+compiling Bordage.c...
+Source\Bordage.c(76): warning:  #223-D: function "MyTimer_ActiveIT" declared implicitly
+  	MyTimer_ActiveIT (&MyTimerPWM, 5, &bordage_auto);
+Source\Bordage.c: 1 warning, 0 errors
 compiling Musique.c...
 .\Include\Musique.h(14): warning:  #1295-D: Deprecated declaration initMusique - give arg types
   	void initMusique();
@@ -37,36 +47,26 @@ compiling Musique.c...
   	void getNextARR();
 .\Include\Musique.h(16): warning:  #1295-D: Deprecated declaration getNextPSC - give arg types
   	void getNextPSC();
-Source\Musique.c(12): error:  #268: declaration may not appear after executable statement in block
-  	char str[5];
-Source\Musique.c(15): error:  #268: declaration may not appear after executable statement in block
-  	unsigned short ARR = (unsigned short)(str);
 Source\Musique.c(15): warning:  #767-D: conversion from pointer to smaller integer
-  	unsigned short ARR = (unsigned short)(str);
-Source\Musique.c(15): warning:  #177-D: variable "ARR"  was declared but never referenced
-  	unsigned short ARR = (unsigned short)(str);
+  	ARR = (unsigned short)(str);
+Source\Musique.c(11): warning:  #550-D: variable "ARR"  was set but never used
+  	unsigned short ARR;
 Source\Musique.c(20): warning:  #1-D: last line of file ends without a newline
   }
-Source\Musique.c: 6 warnings, 2 errors
-compiling GPIO.c...
-compiling Timer.c...
-compiling Bordage.c...
-compiling Encoder.c...
-compiling Driver_GPIO.c...
-compiling MyTimer.c...
-compiling PWM.c...
-compiling Servo.c...
+Source\Musique.c: 6 warnings, 0 errors
 assembling startup_stm32f10x_md.s...
 compiling system_stm32f10x.c...
-".\Objects\Projet_Voilier_Simulé.axf" - 2 Error(s), 6 Warning(s).
+linking...
+Program Size: Code=3076 RO-data=268 RW-data=80 ZI-data=1048  
+".\Objects\Projet_Voilier_Simulé.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
-                ARM.CMSIS.5.8.0
-                CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 5.5.0
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
@@ -77,19 +77,18 @@ Package Vendor: Keil
 <h2>Collection of Component include folders:</h2>
   .\RTE\Device\STM32F103RB
   .\RTE\_Simul_
-  C:\Users\Ellias\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
-  C:\Users\Ellias\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+  C:\Users\floeh\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\floeh\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE:5.5.0
+   * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Include file:  RTE_Driver\Config\RTE_Device.h
-      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Target not created.
+      Include file:  RTE_Driver\Config\RTE_Device.h
 Build Time Elapsed:  00:00:01
 </pre>
 </body>

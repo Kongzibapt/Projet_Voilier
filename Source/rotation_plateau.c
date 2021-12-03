@@ -73,7 +73,7 @@ void manage_rotation()
 	MyTimer_Base_Init(&MyTimer);
 	MyTimer_PWM(MyTimer.Timer,1);
 
-	//MyTimer_Base_Init(&MyTimer_Musique);
+	//MyTimer _Base_Init(&MyTimer_Musique);
 
 	MyGPIO_Init(&MyGPIO_PWM);
 	MyGPIO_Init(&MyGPIO_Direct);
